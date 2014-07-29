@@ -29,7 +29,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development, :test do
+gem 'jslint_on_rails', group: [:development, :test]
+
+group :test do
+  gem 'simplecov', require: false, group: :test
+  gem 'metric_fu'
   gem 'rspec-rails'
 end
 
